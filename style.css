@@ -1,0 +1,69 @@
+/* ======= root palette ======= */
+:root {
+  --brand:        #3F51B5;
+  --brand-dark:   #2E3AA1;
+  --light:        #ffffff;
+  --grey:         #f7f8fc;
+  --text:         #263238;
+}
+
+/* ======= global ======= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:var(--grey);color:var(--text);line-height:1.6}
+section{padding:4rem 1rem}
+.container{width:min(1120px,90%);margin:auto}
+h2{text-align:center;margin-bottom:2rem;font-size:2rem}
+
+/* ======= buttons ======= */
+.btn{
+  display:inline-block;padding:10px 42px;border-radius:999px;
+  background:var(--brand);color:var(--light);font-weight:600;
+  transition:background .25s
+}
+.btn:hover{background:var(--brand-dark)}
+.btn.light{background:var(--light);color:var(--brand)}
+.btn.light:hover{background:var(--grey)}
+
+/* ======= hero ======= */
+#hero{
+  background:#eceffd url('img/hero-bg.svg') no-repeat center/cover;
+  text-align:center;padding:5rem 1rem;
+}
+#hero h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:600;margin-bottom:1rem}
+#hero p{font-size:1.05rem;margin-bottom:2.2rem}
+
+/* ======= grid & cards ======= */
+.grid{display:grid;gap:2rem}
+@media(min-width:768px){.cols-3{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  background:var(--light);border-radius:1.25rem;padding:2rem;text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.06)
+}
+.card img{width:64px;height:64px;margin-bottom:1rem}
+.card h3{margin:1rem 0 .5rem;font-size:1.2rem}
+.card p{font-size:.95rem}
+
+/* ======= hands‑on ======= */
+#hands-on{background:#fffdf8;text-align:center}
+
+/* ======= team ======= */
+.team-wrap{display:grid;gap:2rem}
+@media(min-width:640px){.team-wrap{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+.member{
+  background:var(--light);padding:1.5rem;border-radius:1rem;text-align:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.05)
+}
+.member img{width:96px;height:96px;border-radius:50%;object-fit:cover}
+.member h4{margin-top:.75rem;font-size:1.05rem}
+.member span{font-size:.9rem;color:#666}
+
+/* ======= support ======= */
+#support{background:var(--brand);color:var(--light);text-align:center}
+#support p{max-width:680px;margin:0 auto 2rem;font-size:1.05rem}
+
+/* ======= footer ======= */
+footer{
+  background:#1c1e31;color:#cfd0e9;text-align:center;
+  padding:1.5rem .5rem;font-size:.85rem
+}
